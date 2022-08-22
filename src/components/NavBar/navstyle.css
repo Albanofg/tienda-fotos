@@ -7,6 +7,7 @@
 
 html{
     font-size: 62%;
+    font-family: Helvetica, sans-serif;
 }
 body{
     font-size: 1.6rem;
@@ -16,7 +17,7 @@ li{
 }
 a{
     text-decoration: none;
-    color: #a9a8a9;
+    color: rgb(255, 236, 200);
 }
 
 .nav{
@@ -24,7 +25,7 @@ a{
     align-items: center;
     justify-content: space-around;
     height: 8vh;
-    background: rgb(2, 14, 48);
+    background: rgb(1, 4, 15);
 }
 
 .marca{
@@ -33,10 +34,31 @@ a{
 }
 
 .nav-menu{
-    color: #a9a8a9;
+    color: rgb(255, 236, 200);
     display: flex;
     align-items: center;
     justify-content: space-around;
     gap: 3rem;
 }
 
+/* .item-list {
+    height: 50vh;
+    width: 50vh;
+    position: relative;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border: 2px solid;
+    margin-bottom: 20px;
+    background-size: cover;
+  } */
+
+  .button{
+    border-radius: 5vh;
+    width: 8vh;
+    height: 8vh;
+    background-color: rgb(255, 236, 200);
+    text-transform: uppercase;
+  }

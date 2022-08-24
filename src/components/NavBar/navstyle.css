@@ -1,3 +1,6 @@
+/*
+
+
 *,
 *::after, 
 *::before{
@@ -6,8 +9,8 @@
 }
 
 html{
-    font-size: 62%;
-    font-family: Helvetica, sans-serif;
+    font-size: 63%;
+    font-family: sans-serif;
 }
 body{
     font-size: 1.6rem;
@@ -20,11 +23,16 @@ a{
     color: rgb(255, 236, 200);
 }
 
+.logo-nav{
+    width: 10rem;
+  }
+
+
 .nav{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    height: 8vh;
+    height: 10rem;
     background: rgb(1, 4, 15);
 }
 
@@ -38,27 +46,38 @@ a{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    gap: 3rem;
+    gap: 2rem;
 }
 
-/* .item-list {
-    height: 50vh;
-    width: 50vh;
-    position: relative;
-    padding: 20px;
-    box-sizing: border-box;
+.cards{
     display: flex;
     align-items: center;
-    text-decoration: none;
-    border: 2px solid;
-    margin-bottom: 20px;
-    background-size: cover;
-  } */
+    text-align: center;
+    justify-content: space-around;
+}
 
-  .button{
+.item-list {
+    height: 25rem;
+    width: 42rem;
     border-radius: 5vh;
-    width: 8vh;
-    height: 8vh;
+    padding: 2.5rem;
+    display: flex;
+    align-items: center;
+    border: 3px solid rgb(1, 4, 15);
+    margin: 2.5rem;
     background-color: rgb(255, 236, 200);
+    background-size: cover;
+}
+
+.button{ 
+    color: rgb(236, 234, 234);
+    background-color: rgb(1, 4, 15);
+    display: flex;
+    width: 8rem;
+    height: 3.5rem;
     text-transform: uppercase;
-  }
+    border-radius: 0.4vh;
+    margin: 3vh;
+}
+
+*/

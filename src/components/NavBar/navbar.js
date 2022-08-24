@@ -1,22 +1,23 @@
 import React from 'react';
-// import ignislogo from './src/assets/img/ignis.png'
-import { FontAwesomeIcon as CartWidget } from '@fortawesome/react-fontawesome'
-import { faBasketShopping } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon as CartWidget } from '@fortawesome/react-fontawesome';
+import { faBasketShopping } from '@fortawesome/free-solid-svg-icons';
+import Ignis from '../../assets/ignis.png';
 
-
-
-function Navbar() {
+function Navbar () {
+  
   return (
     <nav className="nav">
-        <a href="#" className="marca">ignis</a>
-        {/* <a><img src={ignislogo} className='logo' alt='ignis'/></a> */}
+        {/* <a href="#" className="marca">ignis</a> */}
+        <a className='logo-nav'>
+          <img className='logo-nav' src={Ignis}/>
+        </a>
         <ul className="nav-menu">
             <li className="nav-item"><a href="#" className="nav-link">home</a></li>
             <li className="nav-item"><a href="#" className="nav-link">about</a></li>
             <li className="nav-item"><a href="#" className="nav-link">gallery</a></li>
             <li className="nav-item"><a href="#" className="nav-link">contact</a></li>
         </ul>
-        <ul className="nav-menu">
+        <ul className="nav-cart">
           <CartWidget icon={faBasketShopping}/>
         </ul>
     </nav>

@@ -1,0 +1,30 @@
+html{
+    text-decoration: none;
+}
+
+.cards-uno{
+    width: 25rem;
+}
+
+.card-img{
+    /* display: flex; */
+    width: 25rem;
+}
+
+.button-card{
+    background: rgb(1, 4, 15);
+    color:rgb(255, 236, 200);
+    border-radius: 0.2%;
+    width: 25rem;
+    text-align: center;
+    align-items: center;
+}
+
+.item-count{
+    text-transform: uppercase;
+    background:rgb(1, 4, 15);
+    color: rgb(255, 236, 200);
+    width: 25rem;
+    align-items: center;
+    text-align: center;
+}

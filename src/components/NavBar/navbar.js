@@ -2,13 +2,14 @@ import React from 'react';
 import { FontAwesomeIcon as CartWidget } from '@fortawesome/react-fontawesome';
 import { faBasketShopping } from '@fortawesome/free-solid-svg-icons';
 import Ignis from '../../assets/ignis.png';
+import './navstyle.css'
 
 function Navbar () {
   
   return (
     <nav className="nav">
         {/* <a href="#" className="marca">ignis</a> */}
-        <a className='logo-nav'>
+        <a >
           <img className='logo-nav' src={Ignis}/>
         </a>
         <ul className="nav-menu">

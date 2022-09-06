@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import './ItemCount.css';
 
-export const ItemCount = ({stock, inicial, addItem}) => {
+export const ItemCount = ({stock, inicial, addItem, id}) => {
   const [itemCount, setItemCount] = useState(inicial);
 
   const incrementar =()=>{
@@ -22,10 +22,10 @@ export const ItemCount = ({stock, inicial, addItem}) => {
 
   return (
     <div className='cards-uno'>
-          <p className='item-count'>items {itemCount}</p>
+          <p className='item-count'> items {itemCount}</p>
           <button className='button-card' onClick={incrementar}>+</button>
           <button className='button-card' onClick={decrementar}>-</button>
-          <button className='button-card' onClick={()=>(addItem(itemCount))}>add to cart</button>
+          <button className='button-card' onClick={()=>(addItem(itemCount))}>AddToCart</button>
           
     </div>
   )

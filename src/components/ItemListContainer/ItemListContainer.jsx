@@ -1,6 +1,6 @@
 import './itemListContainer.css'
 import ItemList from '../ItemList/ItemList';
-import './itemListContainer.css'
+import { useParams } from 'react-router-dom';
 
 
 
@@ -8,12 +8,11 @@ import './itemListContainer.css'
 const ItemListContainer = () => {
 
     return (
-        <div>
+        <div className='itemList'>
             <ItemList/>
         </div>
     )
-}
-
+}   
 
 
 export default ItemListContainer

@@ -1,9 +1,5 @@
-/* .productos{
-    text-transform: uppercase;
-    background:rgb(1, 4, 15);
-    color: rgb(255, 236, 200);
-    width: 25rem;
-    align-items: center;
-    text-align: center;
-    gap: 2rem;
-} */
+.cards{
+    display: flex;
+    gap: 1rem; 
+    justify-content: center; 
+}

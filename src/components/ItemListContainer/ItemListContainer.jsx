@@ -1,6 +1,5 @@
 import './itemListContainer.css'
 import ItemList from '../ItemList/ItemList';
-import { useParams } from 'react-router-dom';
 
 
 

@@ -1,5 +1,3 @@
-.cards{
-    display: flex;
-    gap: 1rem; 
-    justify-content: center; 
+.card_title{
+    text-align: center;
 }

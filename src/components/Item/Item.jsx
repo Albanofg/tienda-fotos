@@ -1,6 +1,5 @@
-import { useState } from 'react'
 import './item.css'
-import { Link, useParams } from 'react-router-dom'
+import { Link} from 'react-router-dom'
 
 const Item = ({ data }) => {
   const { name, img, price, stock, id} = data
@@ -15,8 +14,7 @@ const Item = ({ data }) => {
         <div className="card bg-dark text-white" key={name}>
           <img className="card-img" src={img} alt="" />
           <div className="card-img-overlay">
-            <h5 className="card-title">{name}</h5>
-            <p className="card-text">{price}</p>
+            <h3 className="card-title">{name}</h3>
           </div>
         </div>
       </Link>

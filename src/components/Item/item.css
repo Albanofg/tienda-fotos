@@ -1,7 +1,16 @@
-.bg-dark{
-    width: 100%;
+.card{
+    display: flex;
+    text-align: center;
 }
 
-.text-white{
-    width: 22vw;
-}
+.cards{
+ 
+    display: grid;
+     
+    grid-template-columns: repeat(3, 1fr);
+     
+    grid-auto-rows: auto;
+     
+    gap: 1rem;     
+    }
+     

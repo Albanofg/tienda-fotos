@@ -8,40 +8,42 @@ import { useParams } from "react-router-dom";
 export const ItemDetail = () => {
     const[data, setData] = useState({})
     const[loading, setLoading] = useState(true)
-
-    const [productId] = useParams();
-
+    const params = useParams();
+    const onAdd =(count)=>{
+        console.log("onAdd", count);
+    }
 
     useEffect(() => {
         getFetch.then(response=>{
-            setData(response.find(prod=>prod.id===productId))
+            setData(response.find(prod=>prod.id===params.productId))
             setLoading(false)
         })
     }, [])
 
 
-    // console.log(data);
+   
+
+
     return(
         <div className="detail-container">
             {loading ? <h2>loading...</h2>
 
             :
-            <div className="item-detail col-4 row">
-                <div className="img-detail row">
-                    <img src={data.img}  />
+            <div className="card mb-3">
+                <div className="img-detail">
+                    <img src={data.img}  className="img-fluid"/>
                 </div>
-                <div>
+                <div className="table-light">
                     <h2>{data.name}</h2>
                     <h3>{data.year}</h3>
-                    <h1>{data.price}</h1>
-                    <ItemCount/>
+                    <h1>${data.price}</h1>
+                    <ItemCount initial={0} stock={data.stock} onAdd={onAdd}/>
                 </div>
             </div>
             }
         </div>
     )
 }
-
 
 
 

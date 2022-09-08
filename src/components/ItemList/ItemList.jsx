@@ -2,7 +2,6 @@ import {useState, useEffect} from 'react';
 import getFetch from '../../helper/helper.js';
 import Item from '../Item/Item';
 import './ItemList.css';
-import { Link, link } from 'react-router-dom';
 
 
 
@@ -19,14 +18,14 @@ const ItemList =()=>{
 
     return (
         <>
-            <h1 className='cards'>prints for sale</h1>
+            <h1 className='card_title'>prints for sale</h1>
 
             {
                 loading ? <h2>loading...</h2>
 
                 :
 
-                    <div className='cards col-4 row'>
+                    <div className='cards '>
                         {data.map(data=>(
                             <Item key={data.name} data={data}/>
                         ))}

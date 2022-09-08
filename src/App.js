@@ -8,7 +8,7 @@ import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetail
 import { Contact } from './components/Contact/Contact';
 import { About } from './components/About/About';
 import { PaginaError } from './components/Error/PaginaError';
-import {BrowserRouter, Routes, Route, useParams} from 'react-router-dom';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
 
 
@@ -18,10 +18,9 @@ function App() {
 
   const[itemNum, setItemNum]= useState(0);
 
-  const addToCart =(productos)=>{
-    // console.log("added", productos);
-    setItemNum(productos);
-  }  
+  // const addToCart =(productos)=>{
+  //   setItemNum(productos);
+  // }  
 
 
   return (

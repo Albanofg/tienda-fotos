@@ -1,3 +1,7 @@
-.detail_container{
-    display: grid;
+.table-ligth{
+    align-items: center;
+}
+
+.detail-container{
+    padding: 2rem;
 }

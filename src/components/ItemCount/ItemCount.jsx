@@ -2,30 +2,32 @@ import React from 'react';
 import { useState } from 'react';
 import './ItemCount.css';
 
-export const ItemCount = ({stock, inicial, addItem, id}) => {
-  const [itemCount, setItemCount] = useState(inicial);
+export const ItemCount = ({stock, initial, onAdd}) => {
+  const [count, setCount] = useState(initial);
+
+  
 
   const incrementar =()=>{
-    if(itemCount<stock){
-    setItemCount(itemCount + 1);
+    if(count<stock){
+    setCount(count + 1);
     }
   }
   
   const decrementar =()=>{
-    if(itemCount>0){
-    setItemCount(itemCount - 1);
+    if(count>0){
+    setCount(count - 1);
     }
-    // console.log(itemCount);
+
 
   }
 
 
   return (
-    <div className='cards-uno'>
-          <p className='item-count'> items {itemCount}</p>
-          <button className='button-card' onClick={incrementar}>+</button>
-          <button className='button-card' onClick={decrementar}>-</button>
-          <button className='button-card' onClick={()=>(addItem(itemCount))}>AddToCart</button>
+    <div className='counter'>
+          <p className=''> items {count}</p>
+          <button className='btn btn-dark' onClick={decrementar}>-</button>
+          <button className='btn btn-dark' onClick={incrementar}>+</button>
+          <button className='btn btn-dark' onClick={()=>onAdd(count)}>AddToCart</button>
           
     </div>
   )

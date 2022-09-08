@@ -14,6 +14,8 @@ import img13 from '../assets/bokeh3.JPG';
 import img14 from '../assets/skate1.JPG';
 import img15 from '../assets/skate2.JPG';
 import img16 from '../assets/skate3.JPG';
+import img17 from '../assets/cortaderas.JPG';
+import img18 from '../assets/villavicencio.JPG';
 
 const productos = [
     {
@@ -52,7 +54,7 @@ const productos = [
         id:'5',
         name: 'bird',
         img: [img5],
-        year: '2022',
+        year: '2020',
         price: 550,
         stock: "12"
     },
@@ -60,90 +62,106 @@ const productos = [
         id:'6',
         name: 'rain',
         img: [img6],
-        year: '2022',
+        year: '2020',
         price: 550,
         stock: "8"
     },
     {
         id:'7',
-        name: 'polaroid',
-        img: [img7],
-        year: '2022',
+        name: 'albums uno',
+        img: [img8],
+        year: '2015',
         price: 550,
-        stock: "14"
+        stock: "10"
     },
     {
         id:'8',
-        name: 'albums uno',
-        img: [img8],
-        year: '2022',
+        name: 'albums dos',
+        img: [img9],
+        year: '2015',
         price: 550,
         stock: "10"
     },
     {
         id:'9',
-        name: 'albums dos',
-        img: [img9],
-        year: '2022',
+        name: 'albums tres',
+        img: [img10],
+        year: '2015',
         price: 550,
         stock: "10"
     },
     {
         id:'10',
-        name: 'albums tres',
-        img: [img10],
-        year: '2022',
+        name: 'bokeh uno',
+        img: [img11],
+        year: '2017',
         price: 550,
-        stock: "10"
+        stock: "8"
     },
     {
         id:'11',
-        name: 'bokeh uno',
-        img: [img11],
-        year: '2022',
+        name: 'bokeh dos',
+        img: [img12],
+        year: '2017',
         price: 550,
         stock: "8"
     },
     {
         id:'12',
-        name: 'bokeh dos',
-        img: [img12],
-        year: '2022',
+        name: 'bokeh tres',
+        img: [img13],
+        year: '2017',
         price: 550,
         stock: "8"
     },
     {
         id:'13',
-        name: 'bokeh tres',
-        img: [img13],
-        year: '2022',
+        name: 'skate uno',
+        img: [img14],
+        year: '2019',
         price: 550,
-        stock: "8"
+        stock: "6"
     },
     {
         id:'14',
-        name: 'skate uno',
-        img: [img14],
-        year: '2022',
+        name: 'skate dos',
+        img: [img15],
+        year: '2019',
         price: 550,
         stock: "6"
     },
     {
         id:'15',
-        name: 'skate dos',
-        img: [img15],
-        year: '2022',
-        price: 550,
-        stock: "6"
-    },
-    {
-        id:'16',
         name: 'skate tres',
         img: [img16],
-        year: '2022',
+        year: '2019',
         price: 550,
         stock: "6"
+    }, 
+    {
+        id:'16',
+        name: 'polaroid',
+        img: [img7],
+        year: '2020',
+        price: 550,
+        stock: "14"
     },
+    {
+        id:'17',
+        name: 'cortaderas',
+        img: [img17],
+        year: '2022',
+        price: 550,
+        stock: "20"
+    },
+    {
+        id:'18',
+        name: 'villavicencio',
+        img: [img18],
+        year: '2022',
+        price: 550,
+        stock: "20"
+    }
 
 ]
 

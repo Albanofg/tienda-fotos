@@ -104,7 +104,7 @@ const productos = [
         img: [img12],
         year: '2017',
         price: 550,
-        stock: "8"
+        stock: "15"
     },
     {
         id:'12',
@@ -172,7 +172,7 @@ const  getFetch = new Promise((resolve, reject) =>{
     setTimeout(()=>{
         resolve(productos)
         reject(err=>console.log(err))
-    })
+    }, 2000)
 })
 
 export default getFetch

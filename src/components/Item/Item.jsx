@@ -1,13 +1,13 @@
 import './item.css'
-import { Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
-const Item = ({ data }) => {
-  const { name, img, price, stock, id} = data
+const Item = ({item }) => {
+  const { name, img, price, stock, id} = item
 
   
   // console.log(tipoProducto);
   
-  console.log(data.id)
+  // console.log(item.id)
 
   return (
       <Link to={`/item/${id}`}>

@@ -13,14 +13,18 @@ function Navbar () {
             <img className='logo-nav' src={Ignis}/>
           </div>
         </Link>
+
         <div className='nav-menu'>
           <Link className='nav-item' to='/'>home</Link>
           <Link className='nav-item' to='/about'>about</Link>
           <Link className='nav-item' to='/gallery'>gallery</Link>
           <Link className='nav-item' to='/contacto'>contact</Link>
         </div>
+
         <div className="nav-cart">
+          <Link to='/cart'>
             <CartWidget/>
+          </Link>
         </div>
     </nav>
   )

@@ -6,12 +6,12 @@ import './ItemList.css';
 
 
 const ItemList =()=>{
-    const[data, setData] = useState([])
+    const[item, setItem] = useState([])
     const[loading,setLoading] =useState(true)
 
     useEffect (()=>{
-        getFetch.then(data=>{
-            setData(data)
+        getFetch.then(item=>{
+            setItem(item)
             setLoading(false)
         })
     }, [])
@@ -26,8 +26,8 @@ const ItemList =()=>{
                 :
 
                     <div className='cards '>
-                        {data.map(data=>(
-                            <Item key={data.name} data={data}/>
+                        {item.map(item=>(
+                            <Item key={item.name} item={item}/>
                         ))}
                     </div>
             }

@@ -1,0 +1,8 @@
+.container__img{
+    width: 20%;
+    border-radius: 10px;
+}
+
+.container__info{
+    margin: 10px auto;
+}

@@ -1,6 +1,7 @@
 .card{
     display: flex;
     text-align: center;
+    
 }
 
 .cards{
@@ -12,5 +13,9 @@
     grid-auto-rows: auto;
      
     gap: 1rem;     
+
+    
     }
      
+
+    

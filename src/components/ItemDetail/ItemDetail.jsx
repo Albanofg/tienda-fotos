@@ -3,24 +3,29 @@ import getFetch from '../../helper/helper';
 import './ItemDetail.css';
 import { ItemCount } from '../ItemCount/ItemCount'
 import { useParams } from "react-router-dom";
+import { useContext } from "react";
+import { CartContext } from "../../context/CartContext";
 
-
-export const ItemDetail = () => {
-    const[data, setData] = useState({})
+export const ItemDetail = ({}) => {
+    const[item, setItem] = useState({})
     const[loading, setLoading] = useState(true)
     const params = useParams();
+    
+    const {addProduct}=useContext(CartContext);
+
     const onAdd =(count)=>{
-        console.log("onAdd", count);
+        addProduct(item, count)
+        // console.log("onAdd", count);
+        
     }
+
 
     useEffect(() => {
         getFetch.then(response=>{
-            setData(response.find(prod=>prod.id===params.productId))
+            setItem(response.find(prod=>prod.id===params.productId))
             setLoading(false)
         })
     }, [])
-
-
    
 
 
@@ -31,13 +36,13 @@ export const ItemDetail = () => {
             :
             <div className="card mb-3">
                 <div className="img-detail">
-                    <img src={data.img}  className="img-fluid"/>
+                    <img src={item.img} alt=""  className="img-fluid" />
                 </div>
                 <div className="table-light">
-                    <h2>{data.name}</h2>
-                    <h3>{data.year}</h3>
-                    <h1>${data.price}</h1>
-                    <ItemCount initial={0} stock={data.stock} onAdd={onAdd}/>
+                    <h2>{item.name}</h2>
+                    <h3>{item.year}</h3>
+                    <h1>${item.price}</h1>
+                    <ItemCount initial={0} stock={item.stock} onAdd={onAdd}/>
                 </div>
             </div>
             }

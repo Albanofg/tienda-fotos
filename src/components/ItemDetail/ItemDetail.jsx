@@ -5,6 +5,7 @@ import { ItemCount } from '../ItemCount/ItemCount'
 import { useParams } from "react-router-dom";
 import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
+import { Link } from "react-router-dom";
 
 export const ItemDetail = ({}) => {
     const[item, setItem] = useState({})
@@ -12,9 +13,11 @@ export const ItemDetail = ({}) => {
     const params = useParams();
     
     const {addProduct}=useContext(CartContext);
+    const [quantity, setQuantity] = useState(0);
 
     const onAdd =(count)=>{
         addProduct(item, count)
+        setQuantity(count);
         // console.log("onAdd", count);
         
     }
@@ -42,7 +45,13 @@ export const ItemDetail = ({}) => {
                     <h2>{item.name}</h2>
                     <h3>{item.year}</h3>
                     <h1>${item.price}</h1>
-                    <ItemCount initial={0} stock={item.stock} onAdd={onAdd}/>
+                    <ItemCount initial={1} stock={item.stock} onAdd={onAdd}/>
+                    {
+                        quantity>0 &&
+                        <Link to='/cart'>
+                            <button className="btn btn-dark">Purchase</button>
+                        </Link>
+                    }
                 </div>
             </div>
             }

@@ -14,8 +14,8 @@ export const CartItem = ({item}) => {
             </div>
             <div className='container__info'>
                 <p>{item.name}</p>
-                <p>{item.price}</p>
                 <p>{item.count}</p>
+                <p>${item.totalPrice}</p>
                 <button className='btn btn-dark' onClick={()=>removeProduct(item.id)}>DeleteItem</button>
 
             </div>

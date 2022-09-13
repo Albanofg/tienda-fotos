@@ -18,9 +18,10 @@ export const CartProvider = ({children})=>{
         if (isInCart(product.id)){
             const productIndex = productCartList.findIndex(element=>element.id===product.id);
             newList[productIndex].count = newList[productIndex].count+quantity
+            newList[productIndex].totalPrice=newList[productIndex].count*newList[productIndex].price;
             setProductCartList(newList);
         }else{
-            const newProduct={...product, count: quantity}
+            const newProduct={...product, count: quantity, totalPrice:quantity*product.price}
             const newList = [...productCartList];
             newList.push(newProduct);
             setProductCartList(newList);
@@ -37,12 +38,15 @@ export const CartProvider = ({children})=>{
         setProductCartList([]);
     }
 
-    
+    const getTotalProducts = () =>{
+        const totalProducts = productCartList.reduce((acc, item)=> acc+item.count, 0)
+        return totalProducts    
+    }
 
 
 
 return(
-    <CartContext.Provider value={{productCartList, addProduct, removeProduct, emptyCart, isInCart}}>
+    <CartContext.Provider value={{productCartList, addProduct, removeProduct, emptyCart, isInCart, getTotalProducts}}>
             {children}
     </CartContext.Provider>    
     )

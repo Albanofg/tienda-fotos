@@ -1,12 +1,13 @@
-import React from 'react';
-import { useContext } from 'react';
+import { React, useContext } from 'react';
 import { CartContext } from '../../context/CartContext';
 import { CartItem } from '../CartItem/CartItem';
+import { Link } from 'react-router-dom';
+
 
 
 export const CartContainer = () => {
 
-    const{productCartList, emptyCart, isInCart}=useContext(CartContext);
+    const{productCartList, emptyCart}=useContext(CartContext);
 
     return (
         <div className='cart_container'>
@@ -21,12 +22,18 @@ export const CartContainer = () => {
                   ))
                 }
 
+              <Link to='/gallery'>
                 <button onClick={emptyCart} className='btn btn-warning'>Empty Cart</button>
-              
+              </Link>
               </>
               :
-              <p>There's nothing here... yet</p>
-              
+              <>
+                <p>There's nothing here... yet</p>
+              <hr/>
+              <Link to='/gallery'>
+                <button className='btn btn-warning' >Add Some</button>
+              </Link>
+              </>
             }
           </div>
         </div>

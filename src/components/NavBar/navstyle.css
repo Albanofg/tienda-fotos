@@ -1,4 +1,10 @@
+.a{
+    text-decoration: none;
+}
 
+a{
+    text-decoration: none;
+}
 
 .nav{
     display: flex ;
@@ -9,6 +15,20 @@
     background: rgb(9, 4, 36);
     text-decoration: none;    
 }
+
+.bubble{
+    height: 15px;
+    width: 15px;
+    color: black;
+    background: wheat;
+}
+
+.widgett{
+    width: 45px;
+    height: auto;
+}
+
+
 
 .logo-nav{
     width: 7rem;
@@ -40,3 +60,5 @@
         display: none;
     }
 }
+
+

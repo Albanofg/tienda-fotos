@@ -3,8 +3,12 @@ import { CartWidget } from '../CartWidget/CartWidget';
 import Ignis from '../../assets/ignis.png';
 import './navstyle.css'
 import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import { CartContext } from '../../context/CartContext';
+
 
 function Navbar () {
+  const {productCartList} = useContext(CartContext);
   
   return (
     <nav className="nav">
@@ -22,9 +26,14 @@ function Navbar () {
         </div>
 
         <div className="nav-cart">
-          <Link to='/cart'>
-            <CartWidget/>
-          </Link>
+          {
+          productCartList.length>0&&
+            <>
+              <Link to='/cart'>
+                <CartWidget/>
+              </Link>
+            </>
+          }
         </div>
     </nav>
   )

@@ -1,40 +1,43 @@
+import { collection, getDocs } from 'firebase/firestore';
 import {useState, useEffect} from 'react';
-import getFetch from '../../helper/helper.js';
+import { useParams } from 'react-router-dom';
+import { dataBase } from '../../Utils/firebase.js';
 import Item from '../Item/Item';
 import './ItemList.css';
 
 
 
-const ItemList =()=>{
+export const ItemList =()=>{
     const[item, setItem] = useState([])
-    const[loading,setLoading] =useState(true)
+    const {categoria} = useParams();
+    const [productos, setProductos] = useEffect([]);
+
 
     useEffect (()=>{
-        getFetch.then(item=>{
-            setItem(item)
-            setLoading(false)
-        })
-    }, [])
+        const getData = async () => {
+            try{
+                const query = collection(dataBase, "tienda-fotos");
+                const response = await getDocs(query)
+                const docs = response.docs;
+                const data = docs.map(doc=>{return{...doc.data(), id:doc.id}})
+                setProductos(data);
+                // console.log(data)
+        } catch (error) {
+            console.log(error)
+        }
+        }
+    },[categoria])
 
     return (
         <>
             <h1 className='card_title'>prints for sale</h1>
 
-            {
-                loading ? <h2>loading...</h2>
-
-                :
-
                     <div className='cards '>
-                        {item.map(item=>(
-                            <Item key={item.name} item={item}/>
+                        {item.map(producto=>(
+                            <Item key={producto.id} item={producto}/>
                         ))}
                     </div>
-            }
 
         </>
     )
 }
-
-
-export default ItemList

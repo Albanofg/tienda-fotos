@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import getFetch from '../../helper/helper';
+// import getFetch from '../../helper/helper';
 import './ItemDetail.css';
 import { ItemCount } from '../ItemCount/ItemCount'
 import { useParams } from "react-router-dom";

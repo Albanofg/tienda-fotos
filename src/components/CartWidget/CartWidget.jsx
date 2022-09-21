@@ -5,13 +5,18 @@ import { CartContext } from '../../context/CartContext';
 
 
 export const CartWidget = ()=>{
-    const {getTotalProducts} = useContext(CartContext);
+    const {getTotalProducts, productCartList} = useContext(CartContext);
 
 
     return(
         <div className='widget'>
+           
+               
+            
             <img className='widgett' src={CartIcon} alt="carrito"/>
             <span className='bubble'>{getTotalProducts()}</span>
+
+           
         </div>
     )
 }

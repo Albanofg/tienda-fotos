@@ -1,42 +1,44 @@
-import { collection, getDocs } from 'firebase/firestore';
-import {useState, useEffect} from 'react';
-import { useParams } from 'react-router-dom';
-import { dataBase } from '../../Utils/firebase.js';
-import Item from '../Item/Item';
 import './ItemList.css';
+import Item from '../Item/Item';
+import {React, useEffect } from 'react';
+import { collection, getDocs } from 'firebase/firestore';
+import { dataBase } from '../../Utils/firebase';
+import { useState } from 'react';
+
 
 
 
 export const ItemList =()=>{
+
     const[item, setItem] = useState([])
-    const {categoria} = useParams();
-    const [productos, setProductos] = useEffect([]);
+    const{loading,setLoading} =useState(true)
 
-
-    useEffect (()=>{
-        const getData = async () => {
-            try{
-                const query = collection(dataBase, "tienda-fotos");
-                const response = await getDocs(query)
-                const docs = response.docs;
-                const data = docs.map(doc=>{return{...doc.data(), id:doc.id}})
-                setProductos(data);
-                // console.log(data)
-        } catch (error) {
-            console.log(error)
+    useEffect(()=>{
+        const getData = async () =>{
+          const query = collection(dataBase, "tienda-fotos");
+          const response = await getDocs(query);
+          const docs = response.docs;
+          const item = docs.map(doc=>{return{...doc.data(), id:doc.id}})
+          setItem(item);
         }
-        }
-    },[categoria])
-
+        getData();
+      },[])
+    
     return (
         <>
             <h1 className='card_title'>prints for sale</h1>
 
+            {
+                loading ? <h2>loading...</h2>
+
+                :
+
                     <div className='cards '>
-                        {item.map(producto=>(
-                            <Item key={producto.id} item={producto}/>
+                        {item.map(item=>(
+                            <Item key={item.id} item={item}/>
                         ))}
                     </div>
+            }
 
         </>
     )

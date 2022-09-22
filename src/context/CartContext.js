@@ -25,7 +25,7 @@ export const CartProvider = ({children})=>{
             const newList = [...productCartList];
             newList.push(newProduct);
             setProductCartList(newList);
-            console.log("New product", newProduct);}
+            }
     }
 
     const removeProduct = (idProduct)=>{
@@ -39,14 +39,18 @@ export const CartProvider = ({children})=>{
     }
 
     const getTotalProducts = () =>{
-        const totalProducts = productCartList.reduce((acc, item)=> acc+item.count, 0)
-        return totalProducts    
+        const totalProducts = productCartList.reduce((acc, item)=> acc+item.count,0)
+        return totalProducts;
+        }
+
+    const getTotalPrice =()=>{
+        const finalPrice = productCartList.reduce((acc, item)=>acc+item.totalPrice,0);
+        return finalPrice;
     }
 
 
-
 return(
-    <CartContext.Provider value={{productCartList, addProduct, removeProduct, emptyCart, isInCart, getTotalProducts}}>
+    <CartContext.Provider value={{productCartList, addProduct, removeProduct, emptyCart, isInCart, getTotalProducts, getTotalPrice}}>
             {children}
     </CartContext.Provider>    
     )

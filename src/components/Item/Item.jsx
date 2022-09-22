@@ -1,11 +1,13 @@
-import './item.css'
-import { Link } from 'react-router-dom'
+import './item.css';
+import { Link } from 'react-router-dom';
+// import Item from '../Item/Item';
+
 
 const Item = ({ item }) => {
   const { name, img, id} = item
 
   
-  // console.log(tipoProducto);
+  
   
   // console.log(item.id)
 

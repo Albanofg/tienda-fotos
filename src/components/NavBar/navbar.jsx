@@ -14,7 +14,7 @@ function Navbar () {
     <nav className="nav">
         <Link to='/'>
           <div>
-            <img className='logo-nav' src={Ignis}/>
+            <img className='logo-nav' src={Ignis} alt=""/>
           </div>
         </Link>
 

@@ -43,7 +43,7 @@ export const ItemDetail = ({}) => {
     return(
         <div className="detail-container">
             {
-                <div className="card mb-3">
+            <div className="card mb-3">
                 <div className="img-detail">
                     <img src={item.img} alt=""  className="img-fluid" />
                 </div>
@@ -54,9 +54,15 @@ export const ItemDetail = ({}) => {
                     <ItemCount initial={1} stock={item.stock} onAdd={onAdd}/>
                     {
                         quantity>0 &&
-                        <Link to='/cart'>
-                            <button className="btn btn-dark">Purchase</button>
-                        </Link>
+                        <>
+                            
+                            <Link to='/cart'>
+                                <button className="btn btn-warning">Purchase</button>
+                            </Link>
+                            <Link to='/gallery'>
+                                <button className="btn btn-light active">Add some more</button>
+                            </Link>
+                        </>
                     }
                 </div>
             </div>

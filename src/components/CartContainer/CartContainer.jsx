@@ -3,7 +3,7 @@ import { CartContext } from '../../context/CartContext';
 import { CartItem } from '../CartItem/CartItem';
 import { Link } from 'react-router-dom';
 import {dataBase} from '../../Utils/firebase';
-import { collection, addDoc } from 'firebase/firestore';
+import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { useState } from 'react';
 
 
@@ -11,7 +11,6 @@ export const CartContainer = () => {
 
     const{productCartList, emptyCart, getTotalPrice}=useContext(CartContext);
     const [orderId, setOrderId]=useState("");
-    
 
     const buyOrder=(e)=>{
       e.preventDefault();
@@ -24,22 +23,18 @@ export const CartContainer = () => {
         },
         items:{
           items: productCartList,
-          total: getTotalPrice()
+          total: getTotalPrice(),
+          created: serverTimestamp(),
         }
       }
-      // console.log(order);
-
-      const queryRef= collection(dataBase, 'orders');
+      console.log(orderId);
+      const queryRef = collection(dataBase, 'orders');
       addDoc(queryRef, order).then(respuesta=>setOrderId(respuesta.id))
-
     }
 
-    
-
     return (
-        <div className='cart_container'>
-          <h1>CartContainer</h1>
-          <div>
+        <div className='final_cart'>
+          <div className='cart_general'>
             {
               productCartList.length>0 ?
               <>
@@ -49,10 +44,7 @@ export const CartContainer = () => {
                     ))
                   }
 
-                
-                
-
-                <p>Total:{getTotalPrice()}</p>
+                <h2>Total:{getTotalPrice()}</h2>
 
                 <form onSubmit={buyOrder}>
                   <input type="text" placeholder='name'/>

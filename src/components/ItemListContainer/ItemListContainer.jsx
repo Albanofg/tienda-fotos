@@ -9,7 +9,3 @@ export const ItemListContainer = ( ) =>{
         </div>
     )
 }
-
-
-
-

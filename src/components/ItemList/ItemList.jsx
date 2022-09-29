@@ -4,16 +4,23 @@ import {React, useEffect } from 'react';
 import { collection, getDocs } from 'firebase/firestore';
 import { dataBase } from '../../Utils/firebase';
 import { useState } from 'react';
+import GridLoader from "react-spinners/GridLoader";
 
 
 
 
 export const ItemList =()=>{
 
+    const [loading,setLoading] = useState()
     const[item, setItem] = useState([])
-    const{loading,setLoading} =useState(true)
+    
 
     useEffect(()=>{
+        setLoading(true);
+        setTimeout(()=>{
+            setLoading(false);
+        }, 1500)
+
         const getData = async () =>{
           const query = collection(dataBase, "tienda-fotos");
           const response = await getDocs(query);
@@ -26,18 +33,19 @@ export const ItemList =()=>{
     
     return (
         <>
-            <h1 className='card_title'>prints for sale</h1>
-
             {
-                loading ? <h2>loading...</h2>
+                loading ?  
+                <div className='loader'>
+                    <GridLoader size={150} color={"#0d1938"} loading={loading}/>
+                </div>
 
                 :
 
-                    <div className='cards '>
-                        {item.map(item=>(
-                            <Item key={item.id} item={item}/>
-                        ))}
-                    </div>
+                <div className='cards '>
+                    {item.map(item=>(
+                        <Item key={item.id} item={item}/>
+                    ))}
+                </div>
             }
 
         </>

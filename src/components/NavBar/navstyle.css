@@ -1,11 +1,3 @@
-.a{
-    text-decoration: none;
-}
-
-a{
-    text-decoration: none;
-}
-
 .nav{
     display: flex ;
     align-items: center;
@@ -16,29 +8,35 @@ a{
     text-decoration: none;    
 }
 
+.nav a{
+    text-decoration: none;
+}
+
 .bubble{
-    height: 15px;
-    width: 15px;
-    color: black;
-    background: wheat;
+    color: rgb(253, 230, 188);
 }
 
 .widgett{
-    width: 45px;
+    width: 28px;
     height: auto;
 }
 
+.widget :hover{
+    opacity: 0.8;
+}
 
 
 .logo-nav{
     width: 7rem;
-    text-decoration: none;    
 }
 
 .nav-menu{
     display: flex;
     gap: 1rem;
-    text-decoration: none;
+}
+
+.nav-menu :hover{
+    color: rgb(0, 247, 255);
 }
 
 .nav-item{
@@ -47,18 +45,11 @@ a{
     text-decoration: none;
 }
 
-.nav-menu :hover{
-    color: rgb(136, 193, 231);
-}
-
-
 @media only screen and (max-width: 600px){
     .nav-menu {
       display: none;
     }
-    .nav-cart{
-        display: none;
-    }
+ 
 }
 
 

@@ -1,15 +1,8 @@
 import './item.css';
 import { Link } from 'react-router-dom';
-// import Item from '../Item/Item';
-
 
 const Item = ({ item }) => {
   const { name, img, id} = item
-
-  
-  
-  
-  // console.log(item.id)
 
   return (
       <Link to={`/item/${id}`}>

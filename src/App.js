@@ -18,7 +18,6 @@ import { CartContext, CartProvider } from './context/CartContext';
 
 function App() {
 
-  const[itemNum, setItemNum]= useState(0);
 
 
 

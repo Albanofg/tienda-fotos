@@ -4,7 +4,6 @@ import { CartContext } from '../../context/CartContext'
 import './CartItem.css'
 
 export const CartItem = ({item}) => {
-  
     const {removeProduct}=useContext(CartContext);
   
     return (
@@ -16,7 +15,6 @@ export const CartItem = ({item}) => {
                 <h1>{item.name}</h1>
                 <p>{item.count}</p>
                 <p>${item.totalPrice}</p>
-
                 <button className='btn btn-dark' onClick={()=>removeProduct(item.id)}>DeleteItem</button>
             </div>
         </div>

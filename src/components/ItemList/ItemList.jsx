@@ -1,13 +1,9 @@
-import './ItemList.css';
 import Item from '../Item/Item';
 import {React, useEffect } from 'react';
 import { collection, getDocs } from 'firebase/firestore';
 import { dataBase } from '../../Utils/firebase';
 import { useState } from 'react';
 import GridLoader from "react-spinners/GridLoader";
-
-
-
 
 export const ItemList =()=>{
 
@@ -19,7 +15,7 @@ export const ItemList =()=>{
         setLoading(true);
         setTimeout(()=>{
             setLoading(false);
-        }, 1500)
+        }, 500)
 
         const getData = async () =>{
           const query = collection(dataBase, "tienda-fotos");

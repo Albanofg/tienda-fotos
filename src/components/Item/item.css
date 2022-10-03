@@ -5,10 +5,6 @@
     transition: 0.5s;
 }
 
-
-
-
-
 .cards{
  
     display: grid;
@@ -23,12 +19,31 @@
      
     grid-auto-rows: auto;
      
-    gap: 0.25rem;     
+    gap: 0.24rem;     
 
-}
-     
+} 
+
 .cards :hover{
     opacity: 0.8;
 }
 
-    
+.img-detail{
+    width: 100%;
+}
+
+.detail-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 3rem;
+}
+
+.table-light{
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.card-detail{
+    border: 1px solid rgb(4, 4, 61);
+}

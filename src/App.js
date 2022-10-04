@@ -1,9 +1,10 @@
 import './app.css';
 import React from 'react'
 import Navbar from './components/NavBar/navbar';
+import Home from './components/Home/Home';
 import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
 import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
-import { Contact } from './components/Contact/Contact';
+import Contact from './components/Contact/Contact';
 import About from './components/About/About';
 import { PaginaError } from './components/Error/PaginaError';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
@@ -18,10 +19,11 @@ function App() {
       <BrowserRouter>
         <React.Fragment>
           <div className='App'>
-            <div>
+              
+            <>
               <Navbar/>
               <Routes>
-                <Route path='/' element={<ItemListContainer/>} />
+                <Route path='/' element={<Home/>} />  
                 <Route path='/gallery' element={<ItemListContainer/>} />
                 <Route path='/item/:productId' element={<ItemDetailContainer/>} />
                 <Route path='/contacto' element={<Contact/>} />
@@ -29,7 +31,7 @@ function App() {
                 <Route path='/cart' element={<CartContainer/>}/>
                 <Route path='*' element={<PaginaError/>} />
               </Routes>
-            </div>
+            </>
           </div>
         </React.Fragment>
       </BrowserRouter>

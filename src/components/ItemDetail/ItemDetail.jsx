@@ -45,12 +45,13 @@ export const ItemDetail = () => {
                     {
                         quantity>0 &&
                         <>
-                            
+                        <br />
                             <Link to='/cart'>
-                                <button className="btn btn-warning">Purchase</button>
+                                <button className="btn btn-warning">Go to cart</button>
                             </Link>
+                            <br />
                             <Link to='/gallery'>
-                                <button className="btn btn-light active">Add some more</button>
+                                <button className="btn btn-light active">Add more</button>
                             </Link>
                         </>
                     }

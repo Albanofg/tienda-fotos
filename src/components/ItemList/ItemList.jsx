@@ -15,7 +15,7 @@ export const ItemList =()=>{
         setLoading(true);
         setTimeout(()=>{
             setLoading(false);
-        }, 500)
+        }, 350)
 
         const getData = async () =>{
           const query = collection(dataBase, "tienda-fotos");

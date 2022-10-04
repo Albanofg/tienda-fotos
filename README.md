@@ -15,3 +15,6 @@
 ###react-spinners (loader)
 
 ###sweetalert2 (alerta de fin de compra)
+
+
+####La app fue testeada en varios navegadores (Chrome, OperaGX, Brave, Firefox y Safari)

@@ -2,7 +2,7 @@
 
 ##Carrito de compras
 
-###Este proyecto es una simulación de un carrito de compras de venta de impresiones de fotografías pre cargadas en el sitio
+###Este proyecto es una simulación de un carrito de compras de impresiones de fotografías pre cargadas en el sitio por "fotografos"
 
 ##Proyecto creado desde npm create-react-app
 

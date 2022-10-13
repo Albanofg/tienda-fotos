@@ -10,6 +10,7 @@ import { PaginaError } from './components/Error/PaginaError';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import { CartContainer } from './components/CartContainer/CartContainer';
 import { CartProvider } from './context/CartContext';
+import Footer from './components/Footer/footer';
 
 
 function App() {
@@ -19,7 +20,6 @@ function App() {
       <BrowserRouter>
         <React.Fragment>
           <div className='App'>
-              
             <>
               <Navbar/>
               <Routes>
@@ -31,6 +31,7 @@ function App() {
                 <Route path='/cart' element={<CartContainer/>}/>
                 <Route path='*' element={<PaginaError/>} />
               </Routes>
+              <Footer/>
             </>
           </div>
         </React.Fragment>

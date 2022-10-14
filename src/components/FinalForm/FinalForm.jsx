@@ -1,10 +1,10 @@
-import './finalForm.css'
-import React, { useState, useContext } from 'react'
-import { CartContext } from '../../context/CartContext'
-import { dataBase } from '../../Utils/firebase'
-import { collection, addDoc, serverTimestamp } from 'firebase/firestore'
-import swal from 'sweetalert'
-import { useNavigate } from 'react-router-dom'
+import './finalForm.css';
+import React, { useState, useContext } from 'react';
+import { CartContext } from '../../context/CartContext';
+import { dataBase } from '../../Utils/firebase';
+import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
+import Swal from 'sweetalert';
+import { useNavigate } from 'react-router-dom';
 
 const FinalForm = () => {
   const [letters, setLetters] = useState('')
@@ -45,7 +45,7 @@ const FinalForm = () => {
     const callbackNewOrder = (data) => {
 
         const alerta = () => {
-          swal({
+          Swal({
             title: 'pst! tracking code for your order',
             text: data.id,
             button: 'ok',

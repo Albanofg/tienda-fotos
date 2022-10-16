@@ -2,7 +2,7 @@ import React from 'react';
 import { CartWidget } from '../CartWidget/CartWidget';
 import Ignis from '../../assets/ignis.png';
 import './navstyle.css'
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { useContext } from 'react';
 import { CartContext } from '../../context/CartContext';
 
@@ -19,9 +19,9 @@ function Navbar () {
         </Link>
 
         <div className='nav-menu'>
-          <Link className='nav-item' to='/about'>about</Link>
-          <Link className='nav-item' to='/gallery'>gallery</Link>
-          <Link className='nav-item' to='/contacto'>contact</Link>
+          <NavLink className='nav-item' activeClassName='active' to='/about'>about</NavLink>
+          <NavLink className='nav-item' activeClassName='active' to='/gallery'>gallery</NavLink>
+          <NavLink className='nav-item' activeClassName='active' to='/contacto'>contact</NavLink>
         </div>
 
         <div className="nav-cart">

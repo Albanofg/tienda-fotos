@@ -355,6 +355,7 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
+    text-decoration: none;
   }
 
   .home:hover .home-p{
@@ -465,4 +466,8 @@
       display: grid;
       text-align: center;
       place-items: center;
+  }
+
+  .btn{
+    margin: 1px;
   }

@@ -3,6 +3,7 @@ import React, { useState, useContext } from 'react'
 import { CartContext } from '../../context/CartContext'
 import { dataBase } from '../../Utils/firebase'
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore'
+import { NavLink } from 'react-router-dom'
 import swal from 'sweetalert'
 import { useNavigate } from 'react-router-dom'
 
@@ -101,6 +102,9 @@ const FinalForm = () => {
           buy
         </button>
       <hr />
+      <NavLink className='btn btn-warning' to='/gallery'>
+        back to gallery
+      </NavLink>
     </form>
   )
 }

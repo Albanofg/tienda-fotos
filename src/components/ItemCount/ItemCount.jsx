@@ -24,7 +24,7 @@ export const ItemCount = ({stock, initial, onAdd}) => {
           <p className=''> items {count}</p>
           <button className='btn btn-dark' onClick={decrementar}>-</button>
           <button className='btn btn-dark' onClick={incrementar}>+</button>
-          <button className='btn btn-dark' onClick={()=>onAdd(count)}>Add to cart</button>
+          <button className='btn btn-dark' onClick={()=>onAdd(count)}>add to cart</button>
           
     </div>
   )

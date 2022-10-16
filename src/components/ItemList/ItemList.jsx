@@ -3,7 +3,7 @@ import {React, useEffect } from 'react';
 import { collection, getDocs } from 'firebase/firestore';
 import { dataBase } from '../../Utils/firebase';
 import { useState } from 'react';
-import GridLoader from "react-spinners/GridLoader";
+import RingLoader from "react-spinners/RingLoader";
 
 export const ItemList =()=>{
 
@@ -13,9 +13,9 @@ export const ItemList =()=>{
 
     useEffect(()=>{
         setLoading(true);
-        setTimeout(()=>{
-            setLoading(false);
-        }, 350)
+            setTimeout(()=>{
+                setLoading(false);
+            }, 350)
 
         const getData = async () =>{
           const query = collection(dataBase, "tienda-fotos");
@@ -32,7 +32,7 @@ export const ItemList =()=>{
             {
                 loading ?  
                 <div className='loader'>
-                    <GridLoader size={150} color={"#0d1938"} loading={loading}/>
+                    <RingLoader size={150} color={"#0d1938"} loading={loading}/>
                 </div>
 
                 :

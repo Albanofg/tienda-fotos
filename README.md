@@ -1,19 +1,19 @@
-#Developer: Albano Flavio González Cartier
+Developer: Albano Flavio González Cartier
 
-##Carrito de compras
+Carrito de compras
 
-####Este proyecto es una simulación de un carrito de compras de venta de impresiones de fotografías pre cargadas en el sitio
+Este proyecto es una simulación de un carrito de compras de impresiones de fotografías pre cargadas en el sitio por "fotografos"
 
-##Gif de Navegacion
+Proyecto creado desde npm create-react-app
 
+Dependencias:
 
+react-bootstrap bootstrap (fue usado en el css de botones)
 
-##Dependencias:
+react-router-dom (rutas de navegación)
 
-###react-bootstrap bootstrap (fue usado en el css de botones)
+react-spinners (loader)
 
-###react-router-dom (rutas de navegación)
+sweetalert2 (alerta de fin de compra)
 
-###react-spinners (loader)
-
-###sweetalert2 (alerta de fin de compra)
+La app fue testeada en varios navegadores (Chrome, OperaGX, Brave, Firefox y Safari)

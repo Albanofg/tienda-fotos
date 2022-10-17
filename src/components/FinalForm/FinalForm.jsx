@@ -1,10 +1,11 @@
-import './finalForm.css';
-import React, { useState, useContext } from 'react';
-import { CartContext } from '../../context/CartContext';
-import { dataBase } from '../../Utils/firebase';
-import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
-import Swal from 'sweetalert';
-import { useNavigate } from 'react-router-dom';
+import './finalForm.css'
+import React, { useState, useContext } from 'react'
+import { CartContext } from '../../context/CartContext'
+import { dataBase } from '../../Utils/firebase'
+import { collection, addDoc, serverTimestamp } from 'firebase/firestore'
+import { NavLink } from 'react-router-dom'
+import swal from 'sweetalert'
+import { useNavigate } from 'react-router-dom'
 
 const FinalForm = () => {
   const [letters, setLetters] = useState('')
@@ -45,7 +46,7 @@ const FinalForm = () => {
     const callbackNewOrder = (data) => {
 
         const alerta = () => {
-          Swal({
+          swal({
             title: 'pst! tracking code for your order',
             text: data.id,
             button: 'ok',
@@ -97,10 +98,13 @@ const FinalForm = () => {
         <input onKeyPress={(e) => { if (!/[0-9]/.test(e.key)) { e.preventDefault(); }}} placeholder="card number" maxLength={16} />
         <input onKeyPress={(e) => { if (!/[0-9]/.test(e.key)) { e.preventDefault(); }}} placeholder="cvv" maxLength={3} style={{width: '3rem'}} />
       <hr />
-        <button type="submit"  className="btn btn-warning">
+        <button type="submit"  className="btn btn-primary">
           buy
         </button>
       <hr />
+      <NavLink className='btn btn-warning' to='/gallery'>
+        back to gallery
+      </NavLink>
     </form>
   )
 }

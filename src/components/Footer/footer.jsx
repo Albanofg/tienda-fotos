@@ -6,11 +6,11 @@ const footer =()=> {
   return (
     <footer className='footer'>
         <div className='design'>
-            entirely designed by <a href="#">Albano González Cartier</a>
+            entirely designed by Albano González Cartier
         </div>
 
         <div>
-            <img className='logo-foot' src={ignis} alt="ignis" />
+            <img className='logo-foot' src={ignis} alt="ign" />
         </div>
     </footer>
 

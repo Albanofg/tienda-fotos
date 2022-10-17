@@ -38,12 +38,29 @@
 }
 
 .nav-menu :hover{
-    color: rgb(0, 247, 255);
+    color: rgb(173, 160, 134);
 }
 
 .nav-item{
+    padding-inline: 0.5rem;
     align-items: center;
     color: rgb(250, 228, 187);
+    text-decoration: none;
+}
+
+.nav-item-ddn{
+    padding-inline: 0.5rem;
+    align-items: center;
+    color: rgb(9, 4, 36);
+    text-decoration: none;
+}
+
+.active{
+    padding-inline: 0.5rem;
+    padding-bottom: 0.3rem;
+    align-items: center;
+    background-color: rgb(250, 228, 187);
+    color: rgb(9, 4, 36);
     text-decoration: none;
 }
 
@@ -53,5 +70,3 @@
     }
  
 }
-
-

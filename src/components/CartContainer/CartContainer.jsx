@@ -24,7 +24,7 @@ export const CartContainer = () => {
                 <FinalForm/>
 
                 <Link to='/gallery'>
-                  <button onClick={emptyCart} className='btn btn-warning'>empty cart</button>
+                  <button onClick={emptyCart} className='btn btn-danger'>empty cart</button>
                 </Link>
                
               </>

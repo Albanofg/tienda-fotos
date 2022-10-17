@@ -18,7 +18,7 @@ export const ItemList =()=>{
         setLoading(true);
             setTimeout(()=>{
                 setLoading(false);
-            }, 1000)
+            }, 1500)
 
         const getData = async () =>{
           const queryRef = !year ? collection(dataBase, "tienda-fotos") :query(collection(dataBase, 'tienda-fotos'), where('year', '==', year) );

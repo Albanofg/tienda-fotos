@@ -1,6 +1,7 @@
 Clona el repositorio "https://github.com/Albanofg/tienda-fotos.git" en tu carpeta
 desde la carpeta "tienda-fotos" usa "npm start" para iniciar en el http://localhost:3000/
 
+Dependencias:
 
 Developer: Albano Flavio González Cartier
 

@@ -40,6 +40,7 @@ function Navbar () {
 
 
         <div className="nav-cart">
+      
           {
           productCartList.length>0&&
             <>

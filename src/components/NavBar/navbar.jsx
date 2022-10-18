@@ -11,46 +11,58 @@ function Navbar () {
   const {productCartList} = useContext(CartContext);
   
   return (
-    <nav className="nav">
-        <Link to='/'>
-          <div>
-            <img className='logo-nav' src={Ignis} alt=""/>
-          </div>
-        </Link>
-
-        <div className='nav-menu'>
-          <NavLink className='nav-item' activeClassName='active' to='/about'>about</NavLink>
-          <NavLink className='nav-item' activeClassName='active' to='/gallery'>gallery</NavLink>
-          <NavLink className='nav-item' activeClassName='active' to='/contacto'>contact</NavLink>
-          <div class="nav-item">
-            <p class="nav-item dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              year
-            </p>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <Link className="nav-item-ddn" to='/gallery'>all</Link>
-              <Link className="nav-item-ddn" to='/gallery/2018'>2018</Link>
-              <Link className="nav-item-ddn" to='/gallery/2020'>2020</Link>
-              <Link className="nav-item-ddn" to='/gallery/2021'>2021</Link>
-              <Link className="nav-item-ddn" to='/gallery/2022'>2022</Link>
+      <nav className="nav">
+          <Link to='/'>
+            <div>
+              <img className='logo-nav' src={Ignis} alt=""/>
             </div>
+          </Link>
+
+          <div className='nav-menu'>
+            <NavLink className='nav-item' activeClassName='active' to='/about'>about</NavLink>
+            <NavLink className='nav-item' activeClassName='active' to='/gallery'>gallery</NavLink>
+            <NavLink className='nav-item' activeClassName='active' to='/contacto'>contact</NavLink>
+            <div class="nav-item">
+              <p class="nav-item dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                year
+              </p>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <Link className="nav-item-ddn" to='/gallery'>all</Link>
+                <Link className="nav-item-ddn" to='/gallery/2018'>2018</Link>
+                <Link className="nav-item-ddn" to='/gallery/2020'>2020</Link>
+                <Link className="nav-item-ddn" to='/gallery/2021'>2021</Link>
+                <Link className="nav-item-ddn" to='/gallery/2022'>2022</Link>
+              </div>
+            </div>
+
           </div>
 
-        </div>
+          <div className="nav-cart">
+        
+            {
+            productCartList.length>0&&
+              <>
+                <Link to='/cart'>
+                  <CartWidget/>
+                </Link>
+              </>
+            }
+          </div>
 
+            
+            <div class="nav-item-toggle">
+              <div class="nav-item dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div className='toggler'>***</div>
+              </div>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <NavLink className='nav-item-ddn' activeClassName='active' to='/about'>about</NavLink>
+                  <NavLink className='nav-item-ddn' activeClassName='active' to='/gallery'>gallery</NavLink>
+                  <NavLink className='nav-item-ddn' activeClassName='active' to='/contacto'>contact</NavLink>
+              </div>
+            </div>
 
-
-        <div className="nav-cart">
-      
-          {
-          productCartList.length>0&&
-            <>
-              <Link to='/cart'>
-                <CartWidget/>
-              </Link>
-            </>
-          }
-        </div>
-    </nav>
+          
+      </nav>
   )
 }
 

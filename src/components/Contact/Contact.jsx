@@ -1,6 +1,5 @@
 import './contact.css'
 import React from 'react'
-import bokeh from '../../assets/bokeh.JPG'
 
 
 const Contact = () => {
@@ -29,7 +28,7 @@ const Contact = () => {
         
         
     </div>
-    <img className='bokeh' src={bokeh} alt="bokeh"/>
+    <img className='bokeh' src='https://www.mediafire.com/convkey/9974/tpfmtuwk3soernz9g.jpg' alt="bokeh"/>
     </>
   )
         

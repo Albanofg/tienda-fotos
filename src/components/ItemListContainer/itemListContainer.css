@@ -11,16 +11,11 @@
     background-color: rgb(255, 255, 255);
 }
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 768px){
     .item-list-container {
         padding: 0%;
         background-color: rgb(3, 1, 27);
     }
-    
-    .loading{
-        size: 75px;
-    }
- 
 }
 
 

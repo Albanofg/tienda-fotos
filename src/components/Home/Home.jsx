@@ -1,3 +1,4 @@
+import './home.css'
 import React from 'react'
 import bird from '../../assets/home-bird.JPG'
 import { NavLink } from 'react-router-dom'

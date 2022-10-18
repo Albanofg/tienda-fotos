@@ -1,0 +1,34 @@
+.contact{
+    display: grid ;
+    justify-content: space-around;
+    width: 100%;
+    height: 8rem;
+    background: rgb(9, 4, 36);
+    text-decoration: none;    
+  }
+
+  .bokeh{
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+  }
+
+  .ext-link{
+    text-decoration: none;
+    color: rgb(253, 230, 188);
+  }
+  .ext-link:hover{
+    color: rgb(0, 247, 255);
+  }
+
+  .grid-elm1{
+    grid-row: 3/4;
+  }
+
+  .grid-elm2{
+    grid-row: 3/4;
+  }
+
+  .grid-elm3{
+    grid-row: 3/4;
+  }

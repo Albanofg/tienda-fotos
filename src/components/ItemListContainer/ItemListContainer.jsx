@@ -42,7 +42,7 @@ export function ItemListContainer(){
         {
         
           <div className="item-list-container">
-            <ItemList data={data} ></ItemList>
+            <ItemList data={data}/>
           </div>
 
         }

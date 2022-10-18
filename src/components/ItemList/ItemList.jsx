@@ -36,7 +36,7 @@ export const ItemList =()=>{
                 loading ?  
                 
                 <div className='loader'>
-                    <RingLoader size={500} color={"#0d1938"} loading={loading}/>
+                    <RingLoader size={500} color={"#f5deb3"} loading={loading}/>
                 </div>
 
               

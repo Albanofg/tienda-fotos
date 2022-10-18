@@ -3,11 +3,11 @@
     flex-direction: column;
     align-items: center ;
     text-align: center;
-    padding: 3rem;
+    margin-top: 3rem;
 }
 
 .container__img{
-    width: 25rem;
+    width: 100%;
 }
 
 .container__info{
@@ -18,6 +18,8 @@
     color: rgb(243, 220, 178);
     background: rgb(4, 4, 39);
 }
+
+
 
 @media only screen and (max-width: 768px){
     .container__img{

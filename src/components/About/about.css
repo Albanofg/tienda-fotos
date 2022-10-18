@@ -7,7 +7,7 @@
   }
 
   .about:hover .p-about{
-    transition: 0.5s ease-in-out ;
+    transition: 1s ease-in-out ;
     clip-path: circle(150% at top left);
   }
 
@@ -33,6 +33,8 @@
     place-items: center;
 
     clip-path: circle(0% at top left);
+    transition: 1s ease-in-out ;
+
   }
 
 
@@ -40,7 +42,7 @@
     .p-about{
       font-size: x-large;
       padding: 1rem;
-      clip-path: 100%;
+      clip-path: circle(150% at top left);
     }
 
   }

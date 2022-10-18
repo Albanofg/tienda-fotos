@@ -49,16 +49,30 @@
     text-decoration: none;
 }
 
+#dropdown-toggle{
+    color: rgb(3,1,27);
+    background-color: aqua;
+    background: blue;
+}
+
 .nav-item-ddn{
     padding-inline: 0.5rem;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
     align-items: center;
-    color: rgb(3, 1, 27);
+    color: rgb(250, 228, 187);
+    background-color: rgb(3, 1, 27);;
     text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.dropdown-menu{
+    background-color: rgb(3, 1, 27);
 }
 
 .active{
     padding-inline: 0.5rem;
-    padding-bottom: 0.3rem;
+    padding-bottom: 0.8rem;
     align-items: center;
     background-color: rgb(250, 228, 187);
     color: rgb(3, 1, 27);
@@ -71,9 +85,7 @@
 }
 
 .toggler{
-    width: 3rem;
     height: 1rem;
-    background-color: rgb(250, 228, 187);
     cursor: pointer;
 }
 
@@ -93,8 +105,8 @@
         position:fixed;
         background-color: rgb(3, 1, 27);
         transition: all 0.3s ease-in-out;
-        padding:1em 0.7em;
-        bottom:1.5em;
+        padding:1.5em 1.1em;
+        bottom:1.3em;
         left:1em;
         border-radius:50%;
         box-shadow: 0px 0px 1px 0.3em rgba(0,0,0,.15); 

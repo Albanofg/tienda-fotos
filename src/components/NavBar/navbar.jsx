@@ -22,11 +22,11 @@ function Navbar () {
             <NavLink className='nav-item' activeClassName='active' to='/about'>about</NavLink>
             <NavLink className='nav-item' activeClassName='active' to='/gallery'>gallery</NavLink>
             <NavLink className='nav-item' activeClassName='active' to='/contacto'>contact</NavLink>
-            <div class="nav-item">
-              <p class="nav-item dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <div className="nav-item">
+              <p className="nav-item dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 year
               </p>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <div className="nav-drop dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <Link className="nav-item-ddn" to='/gallery'>all</Link>
                 <Link className="nav-item-ddn" to='/gallery/2018'>2018</Link>
                 <Link className="nav-item-ddn" to='/gallery/2020'>2020</Link>
@@ -50,11 +50,11 @@ function Navbar () {
           </div>
 
             
-            <div class="nav-item-toggle">
-              <div class="nav-item dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <div className='toggler'>***</div>
+            <div className="nav-item-toggle">
+              <div className="nav-item dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div className='toggler'>menu</div>
               </div>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                       <NavLink className='nav-item-ddn' activeClassName='active' to='/about'>about</NavLink>
                       <NavLink className='nav-item-ddn' activeClassName='active' to='/gallery'>gallery</NavLink>
                       <NavLink className='nav-item-ddn' activeClassName='active' to='/contacto'>contact</NavLink>

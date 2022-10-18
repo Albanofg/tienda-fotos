@@ -40,10 +40,14 @@ export function ItemListContainer(){
   return(
       <div className="item_list_container">
         {
-        
+        <>
           <div className="item-list-container">
             <ItemList data={data}/>
           </div>
+          <a className='to-top' href="#">
+            <img className='arrowup' src="https://cdn-icons-png.flaticon.com/512/60/60564.png" alt="top" />
+          </a>
+        </>
 
         }
       </div>

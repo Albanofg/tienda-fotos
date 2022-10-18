@@ -8,9 +8,7 @@ export const CartItem = ({item}) => {
   
     return (
         <div className='cart_container'>
-            <div className='container__img'>
-                <img className='card_img' src={item.img} alt={item.name}/>
-            </div>
+            <img className='card_img' src={item.img} alt={item.name}/>
             <div className='container__info'>
                 <h1>{item.name}</h1>
                 <p>{item.count}</p>

@@ -48,10 +48,23 @@
     border: 1px solid rgb(4, 4, 61);
 }
 
+.card_img{
+    width: 25rem;
+}
+
 @media only screen and (max-width: 768px){
     .cards{
         grid-template-columns: auto;
         display: block;
         gap: 0;
+    }
+    .card_img{
+        width: 15rem;
+    }
+    .final-price{
+        width: 100;
+    }
+    .container__img{
+        width: 20rem%;
     }
 }

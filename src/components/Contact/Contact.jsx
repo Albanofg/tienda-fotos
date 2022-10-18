@@ -21,7 +21,7 @@ const Contact = () => {
         </div>
 
         <div className='grid-elm3'>
-          <a className='ext-link' href='http://mailto:albanofgonzalez@gmail.com' target="_blank" rel="noreferrer">
+          <a className='ext-link' href='mailto:albanofgonzalez@gmail.com' target="_blank" rel="noreferrer">
             <p className='p-em'>email</p>
           </a>
         </div>

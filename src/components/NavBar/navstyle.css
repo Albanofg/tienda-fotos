@@ -52,7 +52,7 @@
 .nav-item-ddn{
     padding-inline: 0.5rem;
     align-items: center;
-    color: rgb(9, 4, 36);
+    color: rgb(3, 1, 27);
     text-decoration: none;
 }
 
@@ -61,7 +61,7 @@
     padding-bottom: 0.3rem;
     align-items: center;
     background-color: rgb(250, 228, 187);
-    color: rgb(9, 4, 36);
+    color: rgb(3, 1, 27);
     text-decoration: none;
 }
 
@@ -87,34 +87,36 @@
     .nav-item-toggle{
         display: block;
     }
-}
-
-.nav-cart a {
-    position:fixed;
-    background-color: rgb(9, 4, 36);
-    transition: all 0.3s ease-in-out;
-    padding:1.5em 1.2em;
-    bottom:1em;
-    left:1em;
-    border-radius:50%;
-    box-shadow: 0px 0px 1px 0.3em rgba(0,0,0,.15); 
-}
 
 
-.nav-cart a:hover{
-    background-color: rgb(45, 46, 80);
-    box-shadow: 0px 0px 1px 0.5em rgba(0,0,0,.15); 
-    color:white;
-}
+    .nav-cart a {
+        position:fixed;
+        background-color: rgb(3, 1, 27);
+        transition: all 0.3s ease-in-out;
+        padding:1em 0.7em;
+        bottom:1.5em;
+        left:1em;
+        border-radius:50%;
+        box-shadow: 0px 0px 1px 0.3em rgba(0,0,0,.15); 
+        z-index: 1;
+    }
 
-.nav-cart a:hover .bubble{
-    color:white;
-}
-.nav-cart img{
-    transition: all 0.3s ease-in-out;
-    filter:saturate(1);
-}
-.nav-cart a:hover img{
-    filter:saturate(0);
-}
 
+    .nav-cart a:hover{
+        background-color: rgb(45, 46, 80);
+        box-shadow: 0px 0px 1px 0.5em rgba(0,0,0,.15); 
+        color:white;
+    }
+
+    .nav-cart a:hover .bubble{
+        color:white;
+    }
+    .nav-cart img{
+        transition: all 0.3s ease-in-out;
+        filter:saturate(1);
+    }
+    .nav-cart a:hover img{
+        filter:saturate(0);
+    }
+
+}

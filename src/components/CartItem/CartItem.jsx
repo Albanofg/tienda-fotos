@@ -9,7 +9,7 @@ export const CartItem = ({item}) => {
     return (
         <div className='cart_container'>
             <div className='container__img'>
-                <img src={item.img} alt={item.name} style={{width: '25rem'}} />
+                <img className='card_img' src={item.img} alt={item.name}/>
             </div>
             <div className='container__info'>
                 <h1>{item.name}</h1>

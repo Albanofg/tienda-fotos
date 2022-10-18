@@ -7,8 +7,7 @@
 }
 
 .container__img{
-    width: 20%;
-    border-radius: 50px;
+    width: 25rem;
 }
 
 .container__info{
@@ -21,9 +20,7 @@
 }
 
 @media only screen and (max-width: 768px){
-    .cart_general{
-        grid-template-columns: auto;
-        display: block;
-        gap: 0;
+    .container__img{
+        width: 20rem;
     }
 }

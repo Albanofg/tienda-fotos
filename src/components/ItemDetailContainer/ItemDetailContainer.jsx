@@ -35,7 +35,7 @@ export function ItemDetailContainer () {
         load ?
 
         <div className="loader">
-              <RingLoader size={500} color={"#0d1938"} load={load}/>
+              <RingLoader size={200} color={"#0d1938"} load={load}/>
         </div>
       :
 

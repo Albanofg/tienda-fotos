@@ -28,6 +28,7 @@ export function ItemDetail ({data}) {
                         <h5>({data.year})</h5>
                         <h1>${data.price}</h1>
                         <ItemCount initial={1} stock={data.stock} onAdd={onAdd}/>
+                        <NavLink className='btn btn-warning ' to='/gallery'>back to gallery</NavLink>
                         {
                             quantity>0 &&
                             <>
@@ -36,9 +37,7 @@ export function ItemDetail ({data}) {
                                     go to cart
                                 </NavLink>
                                 <br />
-                                <NavLink className='btn btn-warning ' to='/gallery'>
-                                    add more
-                                </NavLink>
+                                
                             </>
                         }
                     </div>

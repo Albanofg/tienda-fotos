@@ -1,11 +1,10 @@
 import React from 'react';
 import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 export const ItemCount = ({stock, initial, onAdd}) => {
   const [count, setCount] = useState(initial);
   const [condition, setCondition] = useState(false);
-
-  
 
   const incrementar =()=>{
     if(count<stock){
@@ -29,7 +28,5 @@ export const ItemCount = ({stock, initial, onAdd}) => {
         </div>
       )
     }
-  
   return(<Render condition={condition}></Render>)
-
 }

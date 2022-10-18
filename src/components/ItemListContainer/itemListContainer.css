@@ -9,6 +9,7 @@
 .item-list-container{
     padding: 1.4rem;
     background-color: rgb(255, 255, 255);
+    min-height: 70vh;
 }
 
 @media only screen and (max-width: 768px){

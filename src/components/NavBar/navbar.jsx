@@ -54,11 +54,11 @@ function Navbar () {
               <div class="nav-item dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <div className='toggler'>***</div>
               </div>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <NavLink className='nav-item-ddn' activeClassName='active' to='/about'>about</NavLink>
-                  <NavLink className='nav-item-ddn' activeClassName='active' to='/gallery'>gallery</NavLink>
-                  <NavLink className='nav-item-ddn' activeClassName='active' to='/contacto'>contact</NavLink>
-              </div>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <NavLink className='nav-item-ddn' activeClassName='active' to='/about'>about</NavLink>
+                      <NavLink className='nav-item-ddn' activeClassName='active' to='/gallery'>gallery</NavLink>
+                      <NavLink className='nav-item-ddn' activeClassName='active' to='/contacto'>contact</NavLink>
+                </div>
             </div>
 
           

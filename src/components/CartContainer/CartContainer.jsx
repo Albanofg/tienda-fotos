@@ -1,3 +1,4 @@
+import './cart.css'
 import { React, useContext } from 'react';
 import { CartContext } from '../../context/CartContext';
 import { CartItem } from '../CartItem/CartItem';

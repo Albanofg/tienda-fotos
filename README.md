@@ -25,6 +25,8 @@ Dependencies:
     react-spinners (loader)
 
     sweetalert2 (end of purchase alert)
+    
+    firebase (database for products and used to push orders)
 
 The app was tested on several browsers (Chrome, OperaGX, Brave, Firefox and Safari)
 
@@ -56,6 +58,8 @@ Dependencias:
     react-spinners (loader)
 
     sweetalert2 (alerta de fin de compra)
+    
+    firebase (base de datos de los productos y usada para almacenar las órdenes)
 
 La app fue testeada en varios navegadores (Chrome, OperaGX, Brave, Firefox y Safari)
 

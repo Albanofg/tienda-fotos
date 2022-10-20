@@ -1,3 +1,37 @@
+Check this proyect here https://tiendafotoscoderhouse.vercel.app
+<hr/>
+
+Clone the repository "https://github.com/Albanofg/foto-tienda.git" in your folder
+
+from the "tienda-fotos" folder use "npm start" to start at http://localhost:3000/
+
+<hr/>
+
+Developer: Albano Flavio González Cartier
+
+
+    This project is a simulation of an online store of pre-loaded photo prints on the site by "photographers"
+
+    Project created from npm create-react-app
+
+<hr/>
+
+Dependencies:
+
+    react-bootstrap bootstrap (was used in the buttons mainly)
+
+    react-router-dom (navigation routes)
+
+    react-spinners (loader)
+
+    sweetalert2 (end of purchase alert)
+
+The app was tested on several browsers (Chrome, OperaGX, Brave, Firefox and Safari)
+
+
+<hr/>
+<hr/>
+
 Clona el repositorio "https://github.com/Albanofg/tienda-fotos.git" en tu carpeta
 
 desde la carpeta "tienda-fotos" usa "npm start" para iniciar en el http://localhost:3000/

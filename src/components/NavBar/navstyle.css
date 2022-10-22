@@ -49,12 +49,6 @@
     text-decoration: none;
 }
 
-#dropdown-toggle{
-    color: rgb(3,1,27);
-    background-color: aqua;
-    background: blue;
-}
-
 .nav-item-ddn{
     padding-inline: 0.5rem;
     padding-top: 0.8rem;

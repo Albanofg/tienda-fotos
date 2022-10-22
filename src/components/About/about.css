@@ -32,7 +32,7 @@
     text-align: center;
     place-items: center;
 
-    clip-path: circle(0% at top left);
+    clip-path: circle(20% at top left);
     transition: 1s ease-in-out ;
 
   }

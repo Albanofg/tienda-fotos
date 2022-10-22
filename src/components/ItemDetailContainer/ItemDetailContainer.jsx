@@ -18,7 +18,7 @@ export function ItemDetailContainer () {
           setLoad(true);
             setTimeout(()=>{
               setLoad(false)
-            }, 1000)
+            }, 1500)
 
           const queryRef = doc(dataBase, "tienda-fotos", productId);
           getDoc(queryRef).then(response=>{
@@ -35,10 +35,9 @@ export function ItemDetailContainer () {
         load ?
 
         <div className="loader">
-              <RingLoader size={200} color={"#0d1938"} load={load}/>
+          <RingLoader size={200} color={"#0d1938"} load={load}/>
         </div>
       :
-
         <div className="containerFluid">
           <ItemDetail data={item}/>
         </div>

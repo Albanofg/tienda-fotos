@@ -20,8 +20,8 @@ function Navbar () {
 
           <div className='nav-menu'>
             <NavLink className='nav-item' activeClassName='active' to='/about'>about</NavLink>
-            <NavLink className='nav-item' activeClassName='active' to='/gallery'>gallery</NavLink>
             <NavLink className='nav-item' activeClassName='active' to='/contacto'>contact</NavLink>
+            <NavLink className='nav-item' activeClassName='active' to='/gallery'>gallery</NavLink>
             <div className="nav-item">
               <p className="nav-item dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 year

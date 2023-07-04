@@ -1,9 +1,9 @@
 Check this proyect here https://tiendafotoscoderhouse.vercel.app
 <hr/>
 
-Clone the repository "https://github.com/Albanofg/foto-tienda.git" in your folder
+Clone the repository "https://github.com/Albanofg/tienda-fotos" in your folder
 
-from the "tienda-fotos" folder use "npm start" to start at http://localhost:3000/
+from the "tienda-fotos" install react on the terminal (npm i react) and "npm start" to start at http://localhost:3000/
 
 <hr/>
 
